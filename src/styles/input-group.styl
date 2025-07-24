@@ -1,0 +1,95 @@
+.input-group
+  display flex
+  flex-direction column
+  align-items center
+  width 100%
+  border-radius border-radius-object
+  overflow hidden
+  border 1px solid #eee
+
+.input-group__prefix
+  background color-primary-500
+  color #fff
+  font-size 20px
+  font-weight bold
+  padding 0 24px
+  height 56px
+  display flex
+  align-items center
+  justify-content center
+  border none
+  cursor pointer
+  transition background 0.2s
+  border-radius border-radius-object 0 0 border-radius-object
+  &:hover, &:active
+    background color-primary-700
+
+.input-group__input
+  flex 1
+  border none
+  outline none
+  font-size 16px
+  color #444
+  padding 0 16px
+  height 56px
+  background #fff
+  border-radius 0 border-radius-object border-radius-object 0
+
+.input-group--phone
+  margin 0 auto 16px auto 
+
+.input-group--resend
+  display flex
+  flex-direction column
+  align-items stretch
+  width auto
+  background transparent
+  border-radius border-radius-object
+  overflow hidden
+  // box-shadow shadow-card
+  border 1px solid #eee
+  margin 0 auto 32px auto
+
+.input-group--resend .input-group__input
+  flex 1
+  border none
+  outline none
+  font-size 16px
+  color #444
+  padding 0 0 0 16px
+  width 160px
+  height 56px
+  background #fff
+  border-radius border-radius-object 0 0 border-radius-object
+
+.input-group__resend-btn
+  background color-primary-500
+  color #fff
+  font-size font-size-secondary
+  font-weight normal
+  padding 0 10px
+  height 56px
+  width 118px
+  display flex
+  align-items center
+  justify-content center
+  border none
+  cursor pointer
+  border-radius 0 border-radius-object border-radius-object 0
+  transition background 0.2s
+  &:hover, &:active
+    background color-primary-700 
+
+.input-error
+  display block
+  width 100%
+  color color-error
+  font-size font-size-helper
+  margin-top 6px
+  margin-left 0 
+
+.input-group__main
+  display flex
+  flex-direction row
+  align-items center
+  width 100% 

@@ -1,0 +1,14 @@
+extends layout.pug
+
+block content
+  - var activePage = 'code'
+  .card-list
+    .card.card-full 會員碼卡片一
+    .card.card-full 會員碼卡片二
+    .card-row
+      .card.card-half 會員碼半幅A
+      .card.card-half 會員碼半幅B 
+    include components/button.pug
+    +button('大按鈕', 'large')
+    +button('中按鈕', 'medium')
+    +button('小按鈕', 'small') 

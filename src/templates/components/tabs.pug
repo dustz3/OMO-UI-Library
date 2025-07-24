@@ -1,0 +1,7 @@
+mixin tabs(items, activeIndex)
+  .tabs
+    each item, i in items
+      if i === activeIndex
+        button.tabs__item.tabs__item--active= item
+      else
+        button.tabs__item= item 

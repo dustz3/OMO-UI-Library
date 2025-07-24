@@ -1,0 +1,75 @@
+.button
+  display flex
+  align-items center
+  justify-content center
+  border none
+  outline none
+  color #fff
+  background color-primary-500
+  cursor pointer
+  font-size font-size-body
+  font-weight bold
+  border-radius border-radius-object
+  transition background 0.2s
+  margin 0 auto
+  &--large
+    width 100% 
+    height 56px
+    border-radius border-radius-object
+  &--medium
+    width 164px
+    height 56px
+    border-radius border-radius-object
+  &--small
+    width 70px
+    height 24px
+    border-radius border-radius-object
+  &:hover, &:active
+    background color-primary-700
+  &:disabled,
+  &[disabled],
+  &--large:disabled,
+  &--medium:disabled,
+  &--small:disabled
+    background color-neutral-300
+    color color-neutral-100
+    cursor not-allowed
+    pointer-events none
+    &:hover, &:active
+      background color-neutral-300
+      color color-neutral-100
+
+// LINE 官方按鈕樣式
+.login-btn
+  display flex
+  width 100%
+  height 56px
+  border-radius 12px
+  font-size font-size-button-lg
+  font-weight bold
+  display flex
+  align-items center
+  justify-content center
+  margin 0 auto
+  &--line
+    background #00c300
+    color #fff
+    border none
+    margin-bottom 0
+    transition background 0.2s
+    &:hover, &:active
+      background #009900
+  .login-btn__icon
+    display inline-flex
+    align-items center
+    margin-right 8px
+    // 若有需要可調整 icon 與文字間距
+
+// 按鈕置中工具類
+.button-center
+  display flex
+  margin 0 auto 
+
+.button--send-code
+  color color-neutral-100
+  background color-neutral-900 

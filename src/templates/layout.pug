@@ -1,0 +1,75 @@
+doctype html
+html(lang="zh-Hant")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="theme-color" content="#C8000A")
+    title 台安藥局 Web App
+    link(rel="stylesheet" href="css/main.css")
+    script(src="js/carousel.min.js")
+    script(src='js/tabs.min.js')
+    script(src='js/layout.min.js')
+  body
+  
+    //- 加入 icon.pug
+    include components/icon.pug
+    .app-bar
+      button.icon-btn.left(style="transform: rotate(90deg);")
+        +icon('arrow-down')
+      .title 頁面標題
+      button.icon-btn.right(onclick="window.location.href='login.html'")
+        +icon('close')
+    .container
+      .content#main-content
+        block content
+    .bottom-nav
+      a.nav-item(class=(typeof activePage !== 'undefined' && activePage=='home') || (typeof window !== 'undefined' && window.location && window.location.pathname.endsWith('index.html')) ? 'active' : '', href="index.html")
+        button.icon-btn
+          +icon('home')
+          span 顏色
+      a.nav-item(class=typeof activePage !== 'undefined' && activePage=='mall' ? 'active' : '', href="mall.html")
+        button.icon-btn
+          +icon('shop')
+          span 字級
+      a.nav-item(class=typeof activePage !== 'undefined' && activePage=='voucher' ? 'active' : '', href="voucher.html")
+        button.icon-btn
+          +icon('coupon')
+          span 按鈕
+      a.nav-item(class=typeof activePage !== 'undefined' && activePage=='profile' ? 'active' : '', href="profile.html")
+        button.icon-btn
+          +icon('my')
+          span 元件
+      a.nav-item(class=typeof activePage !== 'undefined' && activePage=='profile' ? 'active' : '', href="profile.html")
+        button.icon-btn
+          +icon('my')
+          span 排版
+      a.nav-item(class=typeof activePage !== 'undefined' && activePage=='profile' ? 'active' : '', href="profile.html")
+        button.icon-btn
+          +icon('my')
+          span 其他
+    //- 在 .container 內 .content 之後加上 template
+    template#mall-content
+      .card-list
+        .card.card-full 商城卡片一
+        .card.card-full 商城卡片二
+        .card-row
+          .card.card-half 商城半幅A
+          .card.card-half 商城半幅B
+    template#code-content
+      .card-list
+        .card.card-full 會員碼卡片一
+        .card.card-full 會員碼卡片二
+        .card-row
+          .card.card-half 會員碼半幅A
+          .card.card-half 會員碼半幅B
+    template#voucher-content
+      .card-list
+        .card.card-full 兌換卡片一
+        .card.card-full 兌換卡片二
+        .card-row
+          .card.card-half 兌換半幅A
+          .card.card-half 兌換半幅B
+    template#profile-content
+      .card-list
+        .card.card-full 我的資料
+        .card.card-full 設定 

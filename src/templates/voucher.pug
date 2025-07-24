@@ -1,0 +1,32 @@
+extends layout.pug
+
+block content
+  - var activePage = 'voucher'
+  - var tabItems = ['商品兌換', '兌換記錄']
+  - var activeTab = 0
+  include components/tabs.pug
+  +tabs(tabItems, activeTab)
+  .tab-content.tab-content--active
+    //- 商品兌換內容
+    .card-list
+      .card-row
+        .card.card-half 
+          include components/rewardItem-info.pug
+        .card.card-half 
+          include components/rewardItem-info.pug 
+      .card-row
+        .card.card-half 
+          include components/rewardItem-info.pug
+        .card.card-half 
+          include components/rewardItem-info.pug 
+  .tab-content
+    //- 兌換記錄內容
+    .card-list
+      .card.card-full 
+        include components/voucher-info.pug
+      .card.card-full 
+        include components/voucher-info.pug
+      .card.card-full
+        include components/voucher-info.pug
+      .card.card-full
+        include components/voucher-info.pug 

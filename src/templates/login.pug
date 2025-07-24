@@ -1,0 +1,45 @@
+extends layout.pug
+
+block content
+  main
+    .login-page
+      h1.login-title 會員登入
+      .login-logo
+        img(src="images/logo.png" alt="Logo" width="180" height="180")
+      //- 第一組：LINE/手機登入表單
+      form.login-form(style="display:")
+        .login-btns
+          //- LINE 官方登入按鈕
+          button.login-btn.login-btn--line.button-center(type="button" onclick="window.location.href='index.html'")
+            span.login-btn__icon
+              include components/icon.pug
+              +icon('line')
+            | LINE 登入
+          //- 自家大按鈕
+          include components/button.pug
+          +button('手機號碼登入', 'large', 'button-center')
+        .login-agree
+          input(type="checkbox" name="agree")
+          label(for="agree") 請閱讀並同意
+          a.login-link(href="#") 服務條款 
+      //- 第二組：發送驗證碼表單
+      form.login-form(method="post" action="" style="display:none")
+        include components/input-group.pug
+        +inputGroupPhone()
+        include components/button.pug
+        +button('發送驗證碼', 'large', 'button-center button--send-code')
+        .login-agree
+          input(type="checkbox" name="agree")
+          label(for="agree") 請閱讀並同意
+          a.login-link(href="#") 服務條款
+      //- 第三組：手機登入組合表單
+      form.login-form(method="post" action="" style="display:none")
+        include components/input-group.pug
+        +inputGroupPhone()
+        +inputGroupResend()
+        include components/button.pug
+        +button('手機登入', 'large', 'button-center')
+        .login-agree
+          input(type="checkbox" name="agree")
+          label(for="agree") 請閱讀並同意
+          a.login-link(href="#") 服務條款

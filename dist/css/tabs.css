@@ -1,0 +1,33 @@
+.tabs {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 16px;
+  justify-content: center;
+  gap: 8px;
+}
+.tabs .tabs__item {
+  flex: 1;
+  padding: 10px 0 15px;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: font-size-body;
+  font-weight: bold;
+  color: color-neutral-300;
+  cursor: pointer;
+  text-align: center;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+.tabs .tabs__item--active {
+  color: color-primary-500;
+  border-bottom: 5px solid color-primary-500;
+  font-weight: bold;
+}
+.tab-content {
+  display: none;
+}
+.tab-content--active {
+  display: block;
+}

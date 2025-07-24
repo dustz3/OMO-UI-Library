@@ -1,0 +1,18 @@
+.tags {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.tag {
+  display: inline-block;
+  background: color-primary-500;
+  color: color-tag;
+  border-radius: 5px;
+  padding: 2px 8px;
+  font-size: font-size-tag;
+  font-weight: bold;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,93 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: color-primary-500;
+  cursor: pointer;
+  font-size: font-size-body;
+  font-weight: bold;
+  border-radius: border-radius-object;
+  transition: background 0.2s;
+  margin: 0 auto;
+}
+.button--large {
+  width: 100%;
+  height: 56px;
+  border-radius: border-radius-object;
+}
+.button--medium {
+  width: 164px;
+  height: 56px;
+  border-radius: border-radius-object;
+}
+.button--small {
+  width: 70px;
+  height: 24px;
+  border-radius: border-radius-object;
+}
+.button:hover,
+.button:active {
+  background: color-primary-700;
+}
+.button:disabled,
+.button[disabled],
+.button--large:disabled,
+.button--medium:disabled,
+.button--small:disabled {
+  background: color-neutral-300;
+  color: color-neutral-100;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.button:disabled:hover,
+.button[disabled]:hover,
+.button--large:disabled:hover,
+.button--medium:disabled:hover,
+.button--small:disabled:hover,
+.button:disabled:active,
+.button[disabled]:active,
+.button--large:disabled:active,
+.button--medium:disabled:active,
+.button--small:disabled:active {
+  background: color-neutral-300;
+  color: color-neutral-100;
+}
+.login-btn {
+  display: flex;
+  width: 100%;
+  height: 56px;
+  border-radius: 12px;
+  font-size: font-size-button-lg;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.login-btn--line {
+  background: #00c300;
+  color: #fff;
+  border: none;
+  margin-bottom: 0;
+  transition: background 0.2s;
+}
+.login-btn--line:hover,
+.login-btn--line:active {
+  background: #090;
+}
+.login-btn .login-btn__icon {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 8px;
+}
+.button-center {
+  display: flex;
+  margin: 0 auto;
+}
+.button--send-code {
+  color: color-neutral-100;
+  background: color-neutral-900;
+}

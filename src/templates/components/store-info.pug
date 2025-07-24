@@ -1,0 +1,23 @@
+.card__store-info
+  .card__store-top
+    img.card__store-logo(src="/images/logo.png", width="60", height="60", alt="門店Logo")
+    .card__store-meta
+      .card__store-meta-top
+        span.card__store-name 高雄左營店
+        span.card__store-distance 3.4KM
+      .card__store-meta-bottom
+        span.card__store-time
+          include icon.pug
+          +icon('clock')
+          | 09:00 - 21:00
+        span.card__store-phone
+          include icon.pug
+          +icon('phone')
+          | 02-22478857
+  .card__store-bottom
+    .card__store-tags
+      include tags.pug
+      +tag('到店取')
+      +tag('優惠券')
+      +tag('回饋 3%')
+    a.card__store-link(href="#") 全部門店&gt; 

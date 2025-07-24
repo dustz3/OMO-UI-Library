@@ -1,0 +1,22 @@
+mixin inputGroupPhone()
+  .input-group.input-group--phone
+    .input-group__main
+      span.input-group__prefix#countryPrefix(onclick="document.getElementById('countryCode').click()") +886
+      input.input-group__input(type="tel" inputmode="numeric" placeholder="手機號碼" name="phone" id="phone")
+      select#countryCode(style="display:none" onchange="updatePrefix()")
+        option(value="+886" selected) +886
+        option(value="+852") +852
+        option(value="+81") +81
+    span.input-error 手機號碼格式錯誤，請重新輸入
+  script.
+    function updatePrefix() {
+      var select = document.getElementById('countryCode');
+      var prefix = document.getElementById('countryPrefix');
+      prefix.textContent = select.value;
+    }
+mixin inputGroupResend()
+  .input-group.input-group--resend
+    .input-group__main
+      input.input-group__input(type="tel" inputmode="numeric" placeholder="請輸入驗證碼" name="code" id="code")
+      button.input-group__resend-btn 重新發送 (59s)
+    span.input-error 驗證碼錯誤，請重新輸入

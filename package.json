@@ -1,0 +1,33 @@
+{
+  "name": "tai-an-pharmacy-site",
+  "version": "1.0.0",
+  "scripts": {
+    "build:css": "stylus src/styles/main.styl -o dist/css/",
+    "minify:css": "npx postcss dist/css/main.css -o dist/css/main.min.css --use cssnano",
+    "build:html": "pug src/templates/index.pug src/templates/voucher.pug src/templates/mall.pug src/templates/order.pug src/templates/profile.pug src/templates/code.pug src/templates/login.pug -o dist/",
+    "copy-images": "cp -R src/images dist/",
+    "copy-js": "cp -R src/js dist/",
+    "clean:components": "rm -rf dist/components",
+    "build": "npm run build:css && npm run build:html",
+    "watch:css": "stylus -w src/styles/main.styl -o dist/css/",
+    "watch:html": "pug -w src/templates -o dist/",
+    "watch": "nodemon --watch src --ext pug,styl,js --exec \"npm run build\"",
+    "live": "live-server dist",
+    "dev": "npm-run-all --parallel watch live",
+    "watch:pug:single": "chokidar 'src/templates/**/*.pug' -c 'pug {path} -o dist/'",
+    "watch:styl:single": "chokidar 'src/styles/**/*.styl' -c 'stylus {path} -o dist/css/'",
+    "dev:single": "npm-run-all --parallel watch:pug:single watch:styl:single live",
+    "watch:pug:all": "chokidar 'src/templates/**/*.pug' -c 'pug src/templates/*.pug -o dist/'",
+    "dev:pug": "npm-run-all --parallel watch:pug:all live"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "cssnano": "^7.1.0",
+    "live-server": "^1.2.2",
+    "nodemon": "^3.1.10",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^11.0.1",
+    "pug-cli": "^1.0.0-alpha6",
+    "stylus": "^0.64.0"
+  }
+}
