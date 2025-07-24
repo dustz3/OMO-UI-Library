@@ -132,3 +132,8 @@ a {
   border: 1px solid #efefef;
   padding: 5%;
 }
+.desc {
+  font-size: 14px;
+  color: #989898;
+  margin-top: 4px;
+}
