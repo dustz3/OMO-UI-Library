@@ -16,7 +16,7 @@ html(lang="zh-Hant")
     .app-bar
       button.icon-btn.left(style="transform: rotate(90deg);")
         +icon('arrow-down')
-      .title UI Design System
+      .title= pageTitle || '預設標題'
       button.icon-btn.right(onclick="window.location.href='login.html'")
         +icon('close')
     .container
@@ -25,7 +25,7 @@ html(lang="zh-Hant")
     .bottom-nav
       a.nav-item(class=(typeof activePage !== 'undefined' && activePage=='home') || (typeof window !== 'undefined' && window.location && window.location.pathname.endsWith('index.html')) ? 'active' : '', href="index.html")
         button.icon-btn
-          +icon('home')
+          +icon('color')
           span 顏色
       a.nav-item(class=typeof activePage !== 'undefined' && activePage=='mall' ? 'active' : '', href="mall.html")
         button.icon-btn
