@@ -5,25 +5,35 @@ block content
     // 顏色視覺化展示
     section.color-demo
       h2 顏色變數視覺化
-      .color-group Base
-        .color-sample(style="background: #ffffff") color-base-white #ffffff
-        .color-sample(style="background: #121212; color: #fff") color-base-black #121212
-      .color-group Neutral
-        .color-sample(style="background: #d0d0d0") color-neutral-100 #d0d0d0
-        .color-sample(style="background: #989898") color-neutral-300 #989898
-        .color-sample(style="background: #666666; color: #fff") color-neutral-500 #666666
-        .color-sample(style="background: #484848; color: #fff") color-neutral-700 #484848
-        .color-sample(style="background: #2b2b2b; color: #fff") color-neutral-900 #2b2b2b
-      .color-group Primary
-        .color-sample(style="background: #68c7fa") color-primary-300 #68c7fa
-        .color-sample(style="background: #1eabf8; color: #fff") color-primary-500 #1eabf8
-        .color-sample(style="background: #1579b0; color: #fff") color-primary-700 #1579b0
-      .color-group Secondary (Orange)
-        .color-sample(style="background: #ffd180") color-secondary-300 #ffd180
-        .color-sample(style="background: #ff9800") color-secondary-500 #ff9800
-        .color-sample(style="background: #f57c00; color: #fff") color-secondary-700 #f57c00
-      .color-group Semantic
-        .color-sample(style="background: #e96161; color: #fff") color-error #e96161
-        .color-sample(style="background: #60a0ff; color: #fff") color-information #60a0ff
-        .color-sample(style="background: #64bb67; color: #fff") color-success #64bb67
-        .color-sample(style="background: #f5ce6c") color-warning #f5ce6c 
+      .color-group
+        .color-title Base
+        .color-sample-list
+          .color-sample(style="background: #ffffff")  White
+          .color-sample(style="background: #121212; color: #fff") Black
+      .color-group
+        .color-title Neutral
+        .color-sample-list
+          .color-sample(style="background: #d0d0d0") 100
+          .color-sample(style="background: #989898") 300
+          .color-sample(style="background: #666666; color: #fff") 500
+          .color-sample(style="background: #484848; color: #fff") 700
+          .color-sample(style="background: #2b2b2b; color: #fff") 900
+      .color-group
+        .color-title Primary
+        .color-sample-list
+          .color-sample(style="background: #68c7fa") 300
+          .color-sample(style="background: #1eabf8; color: #fff") 500
+          .color-sample(style="background: #1579b0; color: #fff") 700
+      .color-group
+        .color-title Secondary (Orange)
+        .color-sample-list
+          .color-sample(style="background: #ffd180") 300
+          .color-sample(style="background: #ff9800") 500
+          .color-sample(style="background: #f57c00; color: #fff") 700
+      .color-group
+        .color-title Semantic
+        .color-sample-list
+          .color-sample(style="background: #e96161; color: #fff") Error
+          .color-sample(style="background: #60a0ff; color: #fff") Information
+          .color-sample(style="background: #64bb67; color: #fff") Success
+          .color-sample(style="background: #f5ce6c") Warning 

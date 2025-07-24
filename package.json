@@ -18,7 +18,9 @@
     "watch:styl:single": "chokidar 'src/styles/**/*.styl' -c 'stylus {path} -o dist/css/'",
     "dev:single": "npm-run-all --parallel watch:pug:single watch:styl:single live",
     "watch:pug:all": "chokidar 'src/templates/**/*.pug' -c 'pug src/templates/*.pug -o dist/'",
-    "dev:pug": "npm-run-all --parallel watch:pug:all live"
+    "dev:pug": "npm-run-all --parallel watch:pug:all live",
+    "watch:build": "chokidar 'src/**/*.pug' 'src/**/*.styl' -c 'npm run build'",
+    "dev:auto": "npm-run-all --parallel watch:build live"
   },
   "devDependencies": {
     "chokidar-cli": "^3.0.0",
