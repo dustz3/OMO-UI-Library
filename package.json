@@ -8,7 +8,7 @@
     "copy-images": "cp -R src/images dist/",
     "copy-js": "cp -R src/js dist/",
     "clean:components": "rm -rf dist/components",
-    "build": "npm run build:css && npm run build:html",
+    "build": "pug src/templates/*.pug -o dist/ && stylus src/**/*.styl -o dist/css/",
     "watch:css": "stylus -w src/styles/main.styl -o dist/css/",
     "watch:html": "pug -w src/templates -o dist/",
     "watch": "nodemon --watch src --ext pug,styl,js --exec \"npm run build\"",
