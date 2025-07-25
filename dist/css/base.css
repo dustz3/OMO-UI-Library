@@ -123,15 +123,6 @@ a {
   flex-wrap: wrap;
   gap: 8px;
 }
-.color-sample {
-  width: calc(50% - 8px);
-  height: 80px;
-  border-radius: border-radius-object;
-  margin: 0;
-  box-sizing: border-box;
-  border: 1px solid #efefef;
-  padding: 5%;
-}
 .desc {
   font-size: 14px;
   color: #989898;

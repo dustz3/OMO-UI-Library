@@ -1,0 +1,20 @@
+extends layout.pug
+
+include components/bottom-nav-demo.pug
+
+block content
+  .demo-content
+    .sample-title Bottom Nav Demo
+    .sample-list
+      .sample-block
+        +bottomNavDemo(['color', 'typo', 'button'], ['color', 'typo', 'button'], ['按鈕1', '按鈕2', '按鈕3'], ['#', '#', '#'])
+        p 三個按鈕
+      .sample-block
+        +bottomNavDemo(['color', 'typo', 'button', 'component', 'layout'], ['color', 'typo', 'button', 'component', 'layout'], ['按鈕1', '按鈕2', '按鈕3', '按鈕4', '按鈕5'], ['#', '#', '#', '#', '#'])
+        p 五個按鈕
+      .sample-block
+        +bottomNavDemo(['color', 'typo', 'button', 'component', 'layout', 'other'], ['color', 'typo', 'button', 'component', 'layout', 'other'], ['按鈕1', '按鈕2', '按鈕3', '按鈕4', '按鈕5', '按鈕6'], ['#', '#', '#', '#', '#', '#'])
+        p 六個按鈕
+      .sample-block
+        +bottomNavDemo(['color', 'typo'], ['color', 'typo'], ['按鈕1', '按鈕2'], ['#', '#'])
+        p 兩個按鈕

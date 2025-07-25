@@ -73,3 +73,164 @@
 .button--send-code
   color color-neutral-100
   background color-neutral-900 
+
+// Button Table Layout
+.button-table
+  width 100%
+  margin 32px 0
+  border-collapse separate
+  border-spacing 0 16px
+
+.button-table-header
+  display flex
+  align-items flex-end
+  margin-bottom 16px
+  .button-table-empty
+    width 120px
+  .button-table-state
+    flex 1
+    text-align center
+    font-size 16px
+    color #666
+    font-weight 500
+
+.button-table-row
+  display flex
+  align-items flex-start
+  margin-bottom 24px
+
+.button-table-label
+  width 120px
+  font-size 28px
+  font-weight bold
+  color #444
+  text-align right
+  line-height 1.2
+  &.primary
+    color #444
+  &.secondary
+    color #444
+  &.tertiary
+    color #444
+  &.transparent
+    color #444
+
+.button-table-size-group
+  flex 1
+  display flex
+  flex-direction column
+  align-items center
+  margin 0 8px
+
+.button-table-size-label
+  font-size 16px
+  color #888
+  margin-bottom 8px
+  text-align center
+
+.button-table-btns
+  display flex
+  flex-direction column
+  gap 12px
+
+// Button Styles
+.btn
+  display inline-flex
+  align-items center
+  justify-content center
+  border none
+  border-radius 8px
+  font-size 16px
+  font-weight 500
+  padding 0 24px
+  height 44px
+  cursor pointer
+  transition all 0.2s
+  outline none
+  gap 8px
+  svg
+    margin-right 4px
+
+.btn-lg
+  height 48px
+  font-size 18px
+  padding 0 32px
+
+.btn-md
+  height 40px
+  font-size 16px
+  padding 0 24px
+
+.btn-sm
+  height 32px
+  font-size 14px
+  padding 0 16px
+
+// Primary
+.btn-primary
+  background #1eabf8
+  color #fff
+  &:hover, &.hovered
+    background #68c7fa
+  &:focus, &.focused
+    background #fff
+    color #1eabf8
+    border 2px solid #1eabf8
+  &:active, &.pressed
+    background #1579b0
+  &[disabled], &.disabled
+    background #b3e0fa
+    color #fff
+    cursor not-allowed
+
+// Secondary
+.btn-secondary
+  background #666
+  color #fff
+  &:hover, &.hovered
+    background #989898
+  &:focus, &.focused
+    background #fff
+    color #666
+    border 2px solid #666
+  &:active, &.pressed
+    background #484848
+  &[disabled], &.disabled
+    background #d0d0d0
+    color #fff
+    cursor not-allowed
+
+// Tertiary
+.btn-tertiary
+  background #fff
+  color #666
+  border 1px solid #d0d0d0
+  &:hover, &.hovered
+    background #fafbfc
+  &:focus, &.focused
+    background #fff
+    color #666
+    border 2px solid #666
+  &:active, &.pressed
+    background #e0e0e0
+  &[disabled], &.disabled
+    background #f5f5f5
+    color #d0d0d0
+    cursor not-allowed
+
+// Transparent
+.btn-transparent
+  background transparent
+  color #666
+  &:hover, &.hovered
+    background #e0e0e0
+  &:focus, &.focused
+    background #fff
+    color #666
+    border 2px solid #666
+  &:active, &.pressed
+    background #d0d0d0
+  &[disabled], &.disabled
+    background transparent
+    color #d0d0d0
+    cursor not-allowed 

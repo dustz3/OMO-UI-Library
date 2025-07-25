@@ -1,0 +1,52 @@
+.bottom-nav-demo {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 10px 0;
+  margin: 32px 0 16px;
+  border: 1px solid #e0e0e0;
+}
+.bottom-nav-demo .nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 12px;
+  padding: 8px 0 4px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.bottom-nav-demo .nav-item svg,
+.bottom-nav-demo .nav-item .icon {
+  font-size: 28px;
+  margin-bottom: 2px;
+  display: block;
+  transition: color 0.2s;
+  color: #666;
+  fill: transparent;
+  stroke: currentColor;
+}
+.bottom-nav-demo .nav-item:hover,
+.bottom-nav-demo .nav-item:focus {
+  color: #1eabf8;
+}
+.bottom-nav-demo .nav-item:hover svg,
+.bottom-nav-demo .nav-item:focus svg,
+.bottom-nav-demo .nav-item:hover .icon,
+.bottom-nav-demo .nav-item:focus .icon {
+  color: #1eabf8;
+  fill: transparent;
+  stroke: currentColor;
+}
+.bottom-nav-demo span {
+  font-size: 12px;
+  margin-top: 2px;
+}

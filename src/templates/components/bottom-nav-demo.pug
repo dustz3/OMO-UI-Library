@@ -1,0 +1,6 @@
+mixin bottomNavDemo(keys, icons, labels, hrefs)
+  .bottom-nav-demo
+    each val, i in keys
+      a.nav-item(href=hrefs[i])
+        +icon(icons[i])
+        span= labels[i] 

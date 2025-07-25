@@ -1,31 +1,39 @@
-extends layout.pug
- 
+extends layout.pug 
 block content
+  - var activePage = 'typo'
   main
     section.typography-demo
       h2 字級
-      .typography-group
-        .typography-sample(style="font-size: 28px; font-weight: 700;")
-          | H1 標題
-          .desc 28px / Bold
-        .typography-sample(style="font-size: 22px; font-weight: 700;")
-          | H2 標題
-          .desc 22px / Bold
-        .typography-sample(style="font-size: 18px; font-weight: 700;")
-          | H3 標題
-          .desc 18px / Bold
-        .typography-sample(style="font-size: 16px; font-weight: 700;")
-          | H4 標題
-          .desc 16px / Bold
-        .typography-sample(style="font-size: 16px; font-weight: 400;")
-          | 內文 Body
-          .desc 16px / Regular
-        .typography-sample(style="font-size: 14px; font-weight: 400;")
-          | 輔助文字 Secondary
-          .desc 14px / Regular
-        .typography-sample(style="font-size: 12px; font-weight: 400;")
-          | 標籤 Caption
-          .desc  12px / Regular
-        .typography-sample(style="font-family: 'Noto Sans TC', 'Noto Sans', 'PingFang TC', 'Microsoft JhengHei', Arial, sans-serif;")
-          | 字型庫
-          .desc 'Noto Sans TC', 'Noto Sans', 'PingFang TC', 'Microsoft JhengHei', Arial, sans-serif
+      .demo-content
+        .sample-title 標題字級
+        .sample-block.column
+          .typography-sample(style="font-size: 28px; font-weight: 700;")
+            | H1 標題
+            .desc 28px / Bold
+          .typography-sample(style="font-size: 22px; font-weight: 700;")
+            | H2 標題
+            .desc 22px / Bold
+          .typography-sample(style="font-size: 18px; font-weight: 700;")
+            | H3 標題
+            .desc 18px / Bold
+          .typography-sample(style="font-size: 16px; font-weight: 700;")
+            | H4 標題
+            .desc 16px / Bold
+      .demo-content
+        .sample-title 內文字級
+        .sample-block.column
+          .typography-sample(style="font-size: 16px; font-weight: 400;")
+            | 內文 Body
+            .desc 16px / Regular
+          .typography-sample(style="font-size: 14px; font-weight: 400;")
+            | 輔助文字 Secondary
+            .desc 14px / Regular
+          .typography-sample(style="font-size: 12px; font-weight: 400;")
+            | 標籤 Caption
+            .desc 12px / Regular
+      .demo-content
+        .sample-title 字型庫
+        .sample-block.column
+          .typography-sample(style="font-size: 12px; font-weight: 400;")
+            | 字型庫
+            .desc 'Noto Sans TC', 'Noto Sans', 'PingFang TC', 'Microsoft JhengHei', Arial, sans-serif

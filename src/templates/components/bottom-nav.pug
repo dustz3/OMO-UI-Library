@@ -1,0 +1,9 @@
+- var navKeys = ['color', 'typo', 'button', 'component', 'layout', 'other']
+- var navIcons = ['color', 'typo', 'button', 'component', 'layout', 'other']
+- var navLabels = ['顏色', '字型', '按鈕', '元件', '排版', '其他']
+- var navHrefs = ['index.html', 'typo.html', 'button.html', 'component.html', 'layout.html', 'other.html']
+.bottom-nav
+  each val, i in navKeys
+    a.nav-item(class=(typeof activePage !== 'undefined' && activePage === navKeys[i] ? 'active' : ''), href=navHrefs[i])
+      +icon(navIcons[i])
+      span= navLabels[i] 

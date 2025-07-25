@@ -15,7 +15,7 @@
   padding 2px 0 25px
 
   .nav-item
-    flex-basis 18%
+    flex-basis 100% / bottom-nav-items
     display flex
     flex-direction column
     align-items center
@@ -32,11 +32,19 @@
       font-size 28px
       margin-bottom 2px
       display block
+      transition color 0.2s
+      color color-neutral-300
+      fill transparent
+      stroke currentColor
 
     &.active,
     &:hover,
     &:focus
       color color-primary-500
+      svg, .icon
+        color color-primary-500
+        fill transparent
+        stroke currentColor
 
     &.qr:hover
       color color-neutral-300 // 保持原色，不受 hover 影響
@@ -61,23 +69,6 @@
     
     .qr-btn
       transition none
-
-  // 避免 QR 按鈕遮住下方 
-  .icon-btn
-    background none
-    border none
-    padding 0
-    cursor pointer
-    display flex
-    flex-direction column
-    align-items center
-    justify-content center
-    width 100%
-    height 100%
-    
-    &:hover, &:focus
-    //   background rgba(200,0,10,0.08)
-      outline none
 
   .icon
     display block

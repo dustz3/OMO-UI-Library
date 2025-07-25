@@ -1,0 +1,18 @@
+.color-group {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.color-title {
+  font-size: font-size-h3;
+  font-weight: font-weight-bold;
+  margin-bottom: 16px;
+  text-align: left;
+}
+.color-sample-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}

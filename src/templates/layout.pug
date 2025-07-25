@@ -5,7 +5,9 @@ html(lang="zh-Hant")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     meta(name="theme-color" content="#1eabf8")
     title UI Design System
-    link(rel="stylesheet" href="css/main.css")
+    link(rel="stylesheet", href="css/main.css")
+    link(rel="stylesheet", href="css/demo-object.css")
+    link(rel="stylesheet", href="css/bottom-nav-demo.css")
     script(src="js/carousel.min.js")
     script(src='js/tabs.min.js')
     script(src='js/layout.min.js')
@@ -13,6 +15,8 @@ html(lang="zh-Hant")
   
     //- 加入 icon.pug
     include components/icon.pug
+    //- 加入 bottom-nav 元件
+    include components/bottom-nav.pug
     .app-bar
       button.icon-btn.left(style="transform: rotate(90deg);")
         +icon('arrow-down')
@@ -22,31 +26,7 @@ html(lang="zh-Hant")
     .container
       .content#main-content
         block content
-    .bottom-nav
-      a.nav-item(class=(typeof activePage !== 'undefined' && activePage=='home') || (typeof window !== 'undefined' && window.location && window.location.pathname.endsWith('index.html')) ? 'active' : '', href="index.html")
-        button.icon-btn
-          +icon('color')
-          span 顏色
-      a.nav-item(class=typeof activePage !== 'undefined' && activePage=='typo' ? 'active' : '', href="typo.html")
-        button.icon-btn
-          +icon('shop')
-          span 字級
-      a.nav-item(class=typeof activePage !== 'undefined' && activePage=='voucher' ? 'active' : '', href="voucher.html")
-        button.icon-btn
-          +icon('coupon')
-          span 按鈕
-      a.nav-item(class=typeof activePage !== 'undefined' && activePage=='profile' ? 'active' : '', href="profile.html")
-        button.icon-btn
-          +icon('my')
-          span 元件
-      a.nav-item(class=typeof activePage !== 'undefined' && activePage=='profile' ? 'active' : '', href="profile.html")
-        button.icon-btn
-          +icon('my')
-          span 排版
-      a.nav-item(class=typeof activePage !== 'undefined' && activePage=='profile' ? 'active' : '', href="profile.html")
-        button.icon-btn
-          +icon('my')
-          span 其他
+    include components/bottom-nav.pug
     //- 在 .container 內 .content 之後加上 template
     template#mall-content
       .card-list
